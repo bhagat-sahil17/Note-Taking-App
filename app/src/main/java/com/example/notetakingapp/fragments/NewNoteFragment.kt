@@ -23,7 +23,7 @@ class NewNoteFragment: Fragment(R.layout.fragment_new_note) {
     private var _binding: FragmentNewNoteBinding? = null
     private val binding get() = _binding!!
     private lateinit var notesViewModel: NoteViewModel
-//    private lateinit var noteAdapter: NoteAdapter
+
     private lateinit var mView: View
 
 
@@ -52,7 +52,8 @@ class NewNoteFragment: Fragment(R.layout.fragment_new_note) {
             notesViewModel.addNote(note)
             Toast.makeText(mView.context,"Note Saved Successfully",Toast.LENGTH_SHORT).show()
 
-            view.findNavController().navigate(R.id.action_newNoteFragment_to_homeFragment)
+            view.findNavController().popBackStack(R.id.homeFragment, false)
+
         }
         else{
             Toast.makeText(mView.context,"Please Enter Title",Toast.LENGTH_SHORT).show()

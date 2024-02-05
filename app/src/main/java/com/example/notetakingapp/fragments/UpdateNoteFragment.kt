@@ -60,7 +60,8 @@ class UpdateNoteFragment : Fragment(R.layout.fragment_update_note) {
             if ( title.isNotEmpty() ){
                 val note = Note(currentNote.id,title,body)
                 notesViewModel.updateNote(note)
-                view.findNavController().navigate(R.id.action_updateNoteFragment_to_homeFragment)
+                view.findNavController().popBackStack(R.id.homeFragment, false)
+
             }
             else{
                 Toast.makeText(context,"Please Enter Title", Toast.LENGTH_SHORT).show()
@@ -74,7 +75,8 @@ class UpdateNoteFragment : Fragment(R.layout.fragment_update_note) {
             setMessage("Are you sure to delete this note?")
             setPositiveButton("Delete"){_,_->
                 notesViewModel.deleteNote(currentNote)
-                view?.findNavController()?.navigate(R.id.action_updateNoteFragment_to_homeFragment)
+                view?.findNavController()?.popBackStack(R.id.homeFragment, false)
+
             }
             setNegativeButton("Cancel",null)
         }.create().show()
