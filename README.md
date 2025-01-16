@@ -1,5 +1,5 @@
 # Note-Taking-App
-> Video Link- [DEMO](https://drive.google.com/file/d/1Mwg4P8n8zD92WSdhqJ0b_mcUyyylaTlF/view)
+> Video Link- [DEMO]([https://drive.google.com/file/d/1Mwg4P8n8zD92WSdhqJ0b_mcUyyylaTlF/view](https://drive.google.com/file/d/14IGkeM4o4QDRFkZTcctFD6mBToiQRELg/view))
 
  
 - Developed a note taking app allowing users to Create a new Note.
